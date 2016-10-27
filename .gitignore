@@ -250,3 +250,14 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# Unity
+/Assets/other/
+/Library/metadata/00/
+/Library/metadata/1c/
+/Library/metadata/1d/
+/Library/UnityAssemblies/
+/Library/
+*.asset
+/ProjectSettings/
+/Temp/
