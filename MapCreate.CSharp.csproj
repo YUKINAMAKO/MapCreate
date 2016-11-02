@@ -75,6 +75,8 @@
     <Compile Include="Assets\UnityCode\MapSample.cs" />
     <Compile Include="Assets\UnityCode\MapSample2.cs" />
     <Compile Include="Assets\UnityCode\MapSample3.cs" />
+    <Compile Include="Assets\UnityCode\MapTest.cs" />
+    <Compile Include="Assets\UnityCode\NewBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityCode\roaddata.txt" />

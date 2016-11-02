@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/* using UnityEngine;
 using System.Collections;
 
 public class MapSample3 : MonoBehaviour
@@ -37,7 +37,9 @@ public class MapSample3 : MonoBehaviour
 
             p3 = p2 / p1;
 
-            if(p1 >= 0 && p2 >= 0)
+            float p4 = System.Math.Abs(p3);
+
+            if (p1 >= 0 && p2 >= 0)
             {
                 j = 1;
             }
@@ -103,3 +105,4 @@ public class MapSample3 : MonoBehaviour
         GameObject go = Instantiate(obj, new Vector3(pos.x, 0, pos.y), obj.transform.rotation) as GameObject;
     }
 }
+*/
