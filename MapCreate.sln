@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapCreate.CSharp.Plugins", "MapCreate.CSharp.Plugins.csproj", "{4F5ADF42-0921-FF93-4C68-786CDAA65DF8}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapCreate.CSharp", "MapCreate.CSharp.csproj", "{2639281D-A35B-129A-A356-256A9325B68E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapCreate.CSharp.Editor", "MapCreate.CSharp.Editor.csproj", "{9C57F37B-949F-80C4-FB06-B54F14095084}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F5ADF42-0921-FF93-4C68-786CDAA65DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5ADF42-0921-FF93-4C68-786CDAA65DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5ADF42-0921-FF93-4C68-786CDAA65DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5ADF42-0921-FF93-4C68-786CDAA65DF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2639281D-A35B-129A-A356-256A9325B68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2639281D-A35B-129A-A356-256A9325B68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2639281D-A35B-129A-A356-256A9325B68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2639281D-A35B-129A-A356-256A9325B68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C57F37B-949F-80C4-FB06-B54F14095084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C57F37B-949F-80C4-FB06-B54F14095084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C57F37B-949F-80C4-FB06-B54F14095084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C57F37B-949F-80C4-FB06-B54F14095084}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
