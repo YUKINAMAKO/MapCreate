@@ -23,8 +23,8 @@ public class MapSample4 : MonoBehaviour
         {
             eachInfo = layoutInfo[i].Split(","[0]);
             GameObject obj = _objs[0];
-
-            float x_point1, y_point1, x_point2, y_point2, x_distance, y_distance, x_Midpoint, y_Midpoint, hypotenuse, x_interpolation, y_interpolation, x_distanceAv, y_distanceAv;
+            int j = 0;
+            float x_point1, y_point1, x_point2, y_point2, x_distance, y_distance, x_Midpoint, y_Midpoint, hypotenuse, x_interpolation, y_interpolation, x_distanceAv, y_distanceAv,Deg;
 
             //x1,y1,x2,y2の座標
             x_point1 = float.Parse(eachInfo[0]);
@@ -44,7 +44,7 @@ public class MapSample4 : MonoBehaviour
             x_Midpoint = (x_point1 + x_point2) / 2;
             y_Midpoint = (y_point1 + y_point2) / 2;
 
-            //x1,y1,x2,y2から求められる長さ()
+            //x1,y1,x2,y2から求められる長さ
             hypotenuse = Mathf.Sqrt((x_distanceAv) * (x_distanceAv) + (y_distanceAv) * (y_distanceAv));
 
             //x,yのそれぞれの補間
@@ -55,8 +55,29 @@ public class MapSample4 : MonoBehaviour
             y_interpolation = System.Math.Abs(y_interpolation);
             x_interpolation = System.Math.Abs(x_interpolation);
 
+            //2点の角度(Degree)※鋭角
+            Deg = Mathf.Atan2(y_distance,x_distance) * Mathf.Rad2Deg;
+            if (Deg < 0)
+            {
+                Deg += 360;    //マイナスのものは360を加算
+            }
+            //Deg = Vector3.Angle(new Vector3(x_point2, 0, y_point2), new Vector3(x_point1, 0, y_point1));
+
+            if (x_distance == 0)
+            {
+                Deg = 90;
+            }
+            else if (y_distance == 0)
+            {
+                Deg = 0;
+            }
+
+
+
+
+
             Vector2 pos = new Vector2(x_Midpoint, y_Midpoint);
-            this.createObj(obj, pos, hypotenuse);
+            this.createObj(obj, pos, hypotenuse, Deg);
 
 
         }
@@ -65,9 +86,9 @@ public class MapSample4 : MonoBehaviour
 
 
 
-    void createObj(GameObject obj, Vector2 pos,float hypotenuse)
+    void createObj(GameObject obj, Vector2 pos,float hypotenuse, float y_rotation)
     {
-        GameObject childObject = Instantiate(obj, new Vector3(-pos.x, 0, pos.y), obj.transform.rotation) as GameObject;
+        GameObject childObject = Instantiate(obj, new Vector3(-pos.x, 0, pos.y), Quaternion.Euler(0, y_rotation, 0)) as GameObject;//Eulerではジンバルロックに対処できない。
         childObject.transform.localScale = new Vector3(hypotenuse, 1, 1);
         childObject.transform.parent = parentObject.transform;
 
