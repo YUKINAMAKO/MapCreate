@@ -22,8 +22,7 @@ public class MapTest : MonoBehaviour
             eachInfo = layoutInfo[i].Split(","[0]);
             GameObject obj = _objs[0];
 
-            int j = 0;
-            float x1, y1, x2, y2, p1, p2, p3, p4;
+            float x1, y1, x2, y2;
             x1 = float.Parse(eachInfo[0]);
             y1 = float.Parse(eachInfo[1]);
             x2 = float.Parse(eachInfo[2]);
